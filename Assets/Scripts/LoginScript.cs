@@ -15,10 +15,10 @@ public class LoginScript : MonoBehaviour
     public Text loginUsernameValidation;
     public Text loginPasswordValidation;
 
-    private string Username;
-    private string Password;
+    private string Username = "";
+    private string Password = "";
     private string[] Lines;
-    private string DecryptedPassword;
+    private string DecryptedPassword = "";
 
 
     public void Login()
@@ -32,6 +32,7 @@ public class LoginScript : MonoBehaviour
             if (System.IO.File.Exists(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + Username + ".txt"))
             {
                 UN = true;
+                Lines = new string[0];
                 Lines = System.IO.File.ReadAllLines(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + Username + ".txt");
                 loginUsernameValidation.gameObject.SetActive(false);
             }
@@ -54,7 +55,7 @@ public class LoginScript : MonoBehaviour
             {
                 // Encrypt the password.
                 int i = 1;
-                foreach (char character in Lines[2])
+                foreach (char character in Lines[1])
                 {
                     i++;
                     char Decrypted = (char)(character / i);
@@ -67,6 +68,13 @@ public class LoginScript : MonoBehaviour
                     PW = true;
                     loginPasswordValidation.gameObject.SetActive(false);
                 }
+                else
+                {
+                    loginPasswordValidation.text = "Password is incorrect.";
+                    loginPasswordValidation.gameObject.SetActive(true);
+                    DecryptedPassword = "";
+                }
+
             }
         }
         else
@@ -78,10 +86,6 @@ public class LoginScript : MonoBehaviour
         // If everything is valid.
         if (UN == true && PW == true)
         {
-            // Clear registration form.
-            //loginUsername.text = "";
-            //loginPassword.text = "";
-
             // Save account info to player preferences.
             PlayerPrefs.SetString("LoggedUser", Username);
 
@@ -114,6 +118,7 @@ public class LoginScript : MonoBehaviour
                 Login();
             }
         }
+
         Username = loginUsername.text;
         Password = loginPassword.text;
     }
