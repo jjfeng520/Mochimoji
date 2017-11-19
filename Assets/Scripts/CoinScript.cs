@@ -46,9 +46,8 @@ public class CoinScript : MonoBehaviour {
         // Save score to player preferences.
         PlayerPrefs.SetInt("Player Score", coinCount);
 
-        // Save score to user's account file.
-        string loggedUsername = PlayerPrefs.GetString("LoggedUser");
-        Lines = System.IO.File.ReadAllLines(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + loggedUsername + ".txt");
+        // Get logged user to use for highest score.
+        string loggedUser = PlayerPrefs.GetString("LoggedUser");
 
         // Save highest score to player preferences.
         if (PlayerPrefs.HasKey("Highest Score"))
@@ -57,11 +56,13 @@ public class CoinScript : MonoBehaviour {
             if (highestScore < coinCount)
             {
                 PlayerPrefs.SetInt("Highest Score", coinCount);
+                PlayerPrefs.SetString("Highest Scored Player", loggedUser);
             }
         }
         else
         {
             PlayerPrefs.SetInt("Highest Score", coinCount);
+            PlayerPrefs.SetString("Highest Scored Player", loggedUser);
         }
     }
 }

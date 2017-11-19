@@ -16,7 +16,6 @@ public class RegisterScript : MonoBehaviour {
 
     private string Username;
     private string Password;
-    private int Score;
     private string form;
 
 
@@ -87,10 +86,6 @@ public class RegisterScript : MonoBehaviour {
             form = (Username + "\r\n" + Password);
             System.IO.File.WriteAllText(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + Username + ".txt", form);
 
-            // Clear registration form.
-            //registerUsername.text = "";
-            //registerPassword.text = "";
-
             // Save account info to player preferences.
             PlayerPrefs.SetString("LoggedUser", Username);
 
@@ -101,6 +96,9 @@ public class RegisterScript : MonoBehaviour {
 	
 	// Allow user to tab through fields and clicking Enter will submit the form.
 	void Update () {
+        Username = registerUsername.text;
+        Password = registerPassword.text;
+
         // If user clicks Tab key, it will select next input field.
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -122,7 +120,5 @@ public class RegisterScript : MonoBehaviour {
                 Register();
             }
         }
-        Username = registerUsername.text;
-        Password = registerPassword.text;
 	}
 }

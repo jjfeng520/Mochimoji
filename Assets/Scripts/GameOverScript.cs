@@ -11,13 +11,20 @@ public class GameOverScript : MonoBehaviour
 
     void Start()
     {
-        // Get player's score from player preferences.
+        // Get logged username and score.
+        string loggedUsername = PlayerPrefs.GetString("LoggedUser");
         int score = PlayerPrefs.GetInt("Player Score");
-        playerScoreText.text = score.ToString();
+
+        // Save score to user's account file.
+        System.IO.File.AppendAllText(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + loggedUsername + ".txt", "\r\n" + score.ToString());
+
+        // Get player's score from player preferences.
+        playerScoreText.text = loggedUsername.ToString() + ": " + score.ToString();
 
         // Get highest score from player preferences.
         int highestScore = PlayerPrefs.GetInt("Highest Score");
-        highestScoreText.text = highestScore.ToString();
+        string highestScoredPlayer = PlayerPrefs.GetString("Highest Scored Player");
+        highestScoreText.text = highestScoredPlayer.ToString() + ": " + highestScore.ToString();
     }
 
     void OnGUI()
@@ -25,6 +32,10 @@ public class GameOverScript : MonoBehaviour
         if (GUI.Button(new Rect(Screen.width / 2 - 60, Screen.height / 6 * 5, 100, 40), "PLAY AGAIN"))
         {
             SceneManager.LoadSceneAsync("MainScene", LoadSceneMode.Single);
+        }
+        if (GUI.Button(new Rect(Screen.width / 2 - 60, Screen.height / 10 * 9, 100, 40), "LOGOUT"))
+        {
+            SceneManager.LoadSceneAsync("LoginRegisterScene", LoadSceneMode.Single);
         }
     }
 }
