@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PowerUpScript : MonoBehaviour
 {
-    public Text triggeredText;
+    //public Text triggeredText;
     public GameObject[] randomEmojis;
     private GameObject selectedEmoji;
 
@@ -31,7 +31,7 @@ public class PowerUpScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            triggeredText.gameObject.SetActive(true);
+            //triggeredText.gameObject.SetActive(true);
             selectedEmoji.gameObject.SetActive(true);
 
             // Add audio when player collects coin.
@@ -43,21 +43,15 @@ public class PowerUpScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            triggeredText.gameObject.SetActive(true);
+            //triggeredText.gameObject.SetActive(true);
             selectedEmoji.gameObject.SetActive(true);
-
-            //// If Player presses "x", it will load the Game Over scene.
-            //if (Input.GetKeyDown(KeyCode.X))
-            //{
-            //    // Bring up webcam here.
-            //}
         }
     }
 
     // If Player moves away from Object, then text will disappear.
     void OnTriggerExit2D(Collider2D collision)
     {
-        triggeredText.gameObject.SetActive(false);
+        //triggeredText.gameObject.SetActive(false);
         selectedEmoji.gameObject.SetActive(false);
     }
 }
