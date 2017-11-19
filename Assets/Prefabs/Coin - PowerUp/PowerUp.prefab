@@ -78,7 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f33aff1849efa4da5dbef535607034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggeredText: {fileID: 0}
   randomEmojis:
   - {fileID: 1700899834711948, guid: 62337a93a2abe4a258b05b083c9e128a, type: 2}
   - {fileID: 1812736778750326, guid: c073ce3f21b904bef815d04afca2c0e0, type: 2}
@@ -121,7 +120,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300232, guid: 73ffbc864fc2d91439b1c6b897f4fee2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
