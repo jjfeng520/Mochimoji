@@ -17,7 +17,7 @@ public class GameOverScript : MonoBehaviour
         int score = PlayerPrefs.GetInt("Player Score");
 
         // Save score to user's account file.
-        System.IO.File.AppendAllText(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + loggedUsername + ".txt", "\r\n" + score.ToString());
+        System.IO.File.AppendAllText(@"C:\Desktop\MochimojiUsers\" + loggedUsername + ".txt", "\r\n" + score.ToString());
 
         // Get player's score from player preferences.
         playerScoreText.text = loggedUsername.ToString() + ": " + score.ToString();

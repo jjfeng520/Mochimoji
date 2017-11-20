@@ -29,11 +29,11 @@ public class LoginScript : MonoBehaviour
         // Checks if username exists.
         if (Username != "")
         {
-            if (System.IO.File.Exists(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + Username + ".txt"))
+            if (System.IO.File.Exists(@"C:\Desktop\MochimojiUsers\" + Username + ".txt"))
             {
                 UN = true;
                 Lines = new string[0];
-                Lines = System.IO.File.ReadAllLines(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + Username + ".txt");
+                Lines = System.IO.File.ReadAllLines(@"C:\Desktop\MochimojiUsers\" + Username + ".txt");
                 loginUsernameValidation.gameObject.SetActive(false);
             }
             else
@@ -51,7 +51,7 @@ public class LoginScript : MonoBehaviour
         // Checks if password is valid.
         if (Password != "")
         {
-            if (System.IO.File.Exists(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + Username + ".txt"))
+            if (System.IO.File.Exists(@"C:\Desktop\MochimojiUsers\" + Username + ".txt"))
             {
                 // Encrypt the password.
                 int i = 1;

@@ -24,10 +24,18 @@ public class RegisterScript : MonoBehaviour {
         bool UN = false;
         bool PW = false;
 
+        // Create a new directory to save the user .txt files if none exists.
+        if (!System.IO.File.Exists(@"C:\Desktop\MochimojiUsers"))
+        {
+            string folderName = @"C:\Users\..\Desktop";
+            string pathString = System.IO.Path.Combine(folderName, "MochimojiUsers");
+            System.IO.Directory.CreateDirectory(pathString);
+        }
+
         // Checks if username is already registered.
         if (Username != "")
         {
-            if (!System.IO.File.Exists(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + Username + ".txt"))
+            if (!System.IO.File.Exists(@"C:\Desktop\MochimojiUsers\" + Username + ".txt"))
             {
                 UN = true;
                 registerUsernameValidation.gameObject.SetActive(false);
@@ -84,7 +92,7 @@ public class RegisterScript : MonoBehaviour {
 
             // Save user info.
             form = (Username + "\r\n" + Password);
-            System.IO.File.WriteAllText(@"C:/Users/Jennifer/Documents/CodingDojo/UnityTestDbFolder_Mochimoji/" + Username + ".txt", form);
+            System.IO.File.WriteAllText(@"C:\Desktop\MochimojiUsers\" + Username + ".txt", form);
 
             // Save account info to player preferences.
             PlayerPrefs.SetString("LoggedUser", Username);
