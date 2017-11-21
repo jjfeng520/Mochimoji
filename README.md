@@ -5,7 +5,7 @@ Mochimoji is a 2D side-scroller that incorporates facial expression recognition.
 
 *This current version/repo does not include the webcam feature due to incompatibility between Mac and Windows.*  
 
-**NOTE: Mochimoji's account info is saved under C:/Desktop/MochimojiUsers.**  
+**NOTE: Mochimoji's login/registration feature saves the user account info under the filepath: C:/Desktop/MochimojiUsers.**  
 
 ### Resources
 #### Unity Asset Store
