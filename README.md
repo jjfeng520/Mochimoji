@@ -3,7 +3,7 @@ C# project by Jennifer Feng, Lola Wang, and Maki Roggers.
   
 Mochimoji is a 2D side-scroller that incorporates facial expression recognition. The objective of the game is to earn the highest score before the timer runs out. Other ways to reach Game Over includes falling into the water (death), or reaching the end treasure chest (goal). Your score increases with each coin you collect, as well as how well you can replicate the random emoji expression that can be triggered. You can also increase your speed by how well you replicate the emoji expression.  
 
-*This current version/repo does not include the webcam feature due to incompatibility between Mac and Windows.*  
+*This current version/repo does not include the webcam feature due to incompatibility between Mac and Windows. See [my other repo](https://github.com/jjfeng520/Mochimoji-Mac) for the Mac version (this version includes the webcam feature!).*  
 
 **NOTE: Mochimoji's login/registration feature saves the user account info under the filepath: C:/Desktop/MochimojiUsers.**  
 
