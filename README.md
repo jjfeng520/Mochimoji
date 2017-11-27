@@ -3,7 +3,7 @@ C# project by Jennifer Feng, Lola Wang, and Maki Roggers.
   
 Mochimoji is a 2D side-scroller that incorporates facial expression recognition. The objective of the game is to earn the highest score before the timer runs out. Other ways to reach Game Over includes falling into the water (death), or reaching the end treasure chest (goal). Your score increases with each coin you collect, as well as how well you can replicate the random emoji expression that can be triggered. You can also increase your speed by how well you replicate the emoji expression.  
 
-*This current version/repo does not include the webcam feature due to incompatibility between Mac and Windows. See [my other repo](https://github.com/jjfeng520/Mochimoji-Mac) for the Mac version (this version includes the webcam feature!).*  
+*This current version/repo does not include the webcam feature due to incompatibility between Mac and Windows. See [my other repo](https://github.com/jjfeng520/Mochimoji-Mac) for the Mac version (this version includes the webcam feature!). See [this repo](https://github.com/makiroggers/Mochimoji) for the updated Windows version that inclues the webcam feature!*  
 
 **NOTE: Mochimoji's login/registration feature saves the user account info under the filepath: C:/Desktop/MochimojiUsers. Due to time constraints (one week to learn Unity + new technologies), some of the features are not best practices.**  
 
@@ -19,3 +19,8 @@ Mochimoji is a 2D side-scroller that incorporates facial expression recognition.
 + [Unity + Microsoft Cognitive Services](https://github.com/misslivirose/unity-cognitive-services-demos/tree/master/unity-emotion-demo) 
 + [Sorting Layers in Unity](https://unity3d.com/learn/tutorials/topics/2d-game-creation/sorting-layers)  
 + [Setting Up 2D Colliders in Unity](http://johnstejskal.com/wp/setting-up-your-characters-2d-colliders-in-unity/)   
+
+#### Downloadable Links for Mochimoji
++ [For Mac](https://drive.google.com/open?id=1QZncU55xtucjMJ-VCoV_3fl9qpvBSNFu)  
++ [For Windows, without webcam](https://drive.google.com/open?id=1G9tA9S6g7T-PputK3-eNaro9pwab_3WJ)  
++ [For Windows, with webcam](https://drive.google.com/open?id=1Rj_kjS87iexJZ1s1WgdhIp_MtmM68YI3)  
